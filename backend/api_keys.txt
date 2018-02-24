@@ -1,4 +1,6 @@
 Google Maps:
+    Directions: AIzaSyD_8lXFomSWVUndt6wUaG2bKKIYBKV3NZw
+    Geocoding: AIzaSyBBorRUMccLNsOl-wcPLNvWL1U4btP8jgk
     Geolocation: AIzaSyCmMLU176YUI-JHW0Jk98yZaBE7g_bxtxI
     Distance Matrix: AIzaSyAmt9c9KO5GubN3JR494sjVvJJZRTmGvIM
     Time Zone: AIzaSyDYKbi6fsqraCOFERWTj5k1q3CI8KXgvHY
