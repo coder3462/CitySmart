@@ -25,112 +25,32 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
         <script>new WOW().init();</script>
-
-        <style>
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color: #333;
-            }
-
-            li {
-                float: left;
-            }
-
-            li a, .dropbtn {
-                display: inline-block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-
-            li a:hover, .dropdown:hover .dropbtn {
-                background-color: red;
-            }
-
-            img {
-                padding-bottom: 5px;
-            }
-            
-            #map {
-                height: 100%;
-            }
-
-            html, body {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-            }
-
-            .hidden-div {
-                display:none;
-            }
-
-            .mapst {
-                height: 500px;
-            }
-
-            .float {
-	            position:fixed;
-	            width:60px;
-	            height:60px;
-	            bottom:40px;
-	            right:60px;
-	            background-color:red;
-	            color:#FFF;
-	            border-radius:50px;
-	            text-align:center;
-	            box-shadow: 2px 2px 3px #999;
-            }
-
-            .my-float {
-            	margin-top:22px;
-            }
-
-            .left-float {
-                width:60px;
-	            height:40px;
-	            bottom:10px;
-	            right:40px;
-            }
-
-            .cmenu {
-                display: inline-block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none;
-            }
-
-            .godown {
-                bottom:20px;
-            }
-        </style>
     </head>
     <body>
 
 
             <ul>
                 <br />
-                <li><p class="cmenu" id="username"></p></li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <li><img src="../images/Star_.svg.png" height="25px" width="25px"><p class="cmenu" id="reputation">Reputation</p></li>
-                    <div class="horizontal click-to-toggle">
-                        <a class="btn-floating btn-large waves-effect waves-light teal right left-float"><i class="material-icons">person</i></a>
-                    </div>
+                <li>&emsp;&emsp;&emsp;</li>
+                <div class="horizontal click-to-toggle">
+                        <a class="btn-floating btn-large waves-effect waves-light teal left left-float"><i class="material-icons">person</i></a>
+                        <li><p class="cmenu left" id="username"></p></li>
+                </div>
+                <li>&emsp;&emsp;&emsp;</li>
+                <li><img src="../images/trophy.png" height="25px" width="25px"><p class="cmenu" id="reputation">Reputation</p></li>
             </ul>
 
-            <div id="clmenu" class="collapse">
+            <div id="clmenu" class="collapse center">&emsp;&emsp;&emsp;
                 <a class="waves-effect waves-light btn-large" onClick="reportCrime()"><i class="material-icons left">cloud</i>report crime</a>&emsp;&emsp;&emsp;
                 <a class="waves-effect waves-light btn-large" onClick="recordTrash()"><i class="material-icons left" >cloud</i>record trashcan</a>&emsp;&emsp;&emsp;
                 <a class="waves-effect waves-light btn-large" onClick="recordBathroom()"><i class="material-icons left">cloud</i>record bathroom</a>&emsp;&emsp;&emsp;
+                <a class="waves-effect waves-light">
+                        <i class="fa fa-plus my-float material-icons" data-toggle="collapse" data-target="#clmenu">cancel</i>
+                </a>
             </div>
         
         <div id="myContent">
-            <a href="javascript:toggleDiv('myContent');" class="float godown" onclick="myFunction()">
+            <a href="javascript:toggleDiv('myContent');" class="float godown">
                 <i class="fa fa-plus my-float material-icons" data-toggle="collapse" data-target="#clmenu">add_circle_outline</i>
             </a>
         </div>
@@ -150,7 +70,7 @@
 
         <!-- placeholder -->
         <script type="text/javascript">
-            var users = ["Root", "Rahul", "Varun"];
+            var users = ["Rahul", "Root", "Varun"];
             document.getElementById("username").innerHTML = users[0];
             var rep = [100, 100, 100];
             document.getElementById("reputation").innerHTML = rep[0];
