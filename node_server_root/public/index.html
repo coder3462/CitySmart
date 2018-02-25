@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
     <script>
-        location.href = "html/main2.html";
-    </script>
+        // location.href = "html/main.html";
+        function UserAction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "/api/example", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send();
+    var response = JSON.parse(xhttp.responseText);
+    console.log(response);
+}
+    </script> 
+<button type="submit" onclick="UserAction()">Search</button>
 </html>

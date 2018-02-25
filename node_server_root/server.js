@@ -3,13 +3,28 @@ const mongo = require('mongodb');
 const path = require('path');
 
 var app = express();
+var router = express.Router();
 
-app.use(express.static(path.resolve('./public')));
+router.route('/example')
+    .post(function(res, req) {
+        console.log('Ginder2');
+        req.end("Troglo");
+    })
+    .get(function(res, req) {
+        console.log('Ginder');
+        req.send("TRoglo2");
+    });
 
-var server = app.listen(3000, function() {
+app.use('/', express.static(path.resolve('./public')));
+app.use('/api', router);
+
+
+var server = app.listen(8080, function() {
   var port = server.address().port;
   console.log('Running on ' + port);
 });
+
+
 
 const client = mongo.MongoClient;
 const url = 'mongodb://localhost:27017';
