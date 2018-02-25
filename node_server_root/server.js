@@ -5,14 +5,28 @@ const path = require('path');
 var app = express();
 var router = express.Router();
 
-router.route('/example')
+router.route('/reportcrime')
     .post(function(res, req) {
-        console.log('Ginder2');
-        req.end("Troglo");
+        console.log('Reporting Crime');
     })
     .get(function(res, req) {
         console.log('Ginder');
-        req.send("TRoglo2");
+    });
+
+router.route('/recordtrash')
+    .post(function(res, req) {
+        console.log('Recording Trash');
+    })
+    .get(function(res, req) {
+        console.log('Ginder');
+    });
+
+router.route('/recordbathroom')
+    .post(function(res, req) {
+        console.log('Recording Bathroom');
+    })
+    .get(function(res, req) {
+        console.log('Ginder');
     });
 
 app.use('/', express.static(path.resolve('./public')));
