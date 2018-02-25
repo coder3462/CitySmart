@@ -9,7 +9,7 @@ function success(pos) {
   var lat = crd.latitude;
   var long = crd.longitude;
   
-  console.log(lat+","+long);
+  return (lat+","+long);
 
   
 };
