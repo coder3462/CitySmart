@@ -5,6 +5,14 @@
             CitySmart
         </title>
 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
         <!-- favicon -->
         <link rel="shortcut icon" href="https://avatars0.githubusercontent.com/u/34464259?s=70&v=4"/>
 
@@ -13,16 +21,56 @@
         <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="../css/animate.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+        <style>
+            .test {
+                height: 500px;
+            }
+
+            .float {
+	            position:fixed;
+	            width:60px;
+	            height:60px;
+	            bottom:40px;
+	            right:40px;
+	            background-color:red;
+	            color:#FFF;
+	            border-radius:50px;
+	            text-align:center;
+	            box-shadow: 2px 2px 3px #999;
+            }
+
+            .my-float {
+            	margin-top:22px;
+            }
+        </style>
     </head>
     <body>
         <div class=row>
-            <div class="col s3 grey">
-                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">person</i></a>
-            </div>
-
-            <div class="col s9 teal">
+            <div class="col grey">
+                <a class="btn-floating btn-large waves-effect waves-light teal"><i class="material-icons">person</i></a>
             </div>
         </div>
-        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        
+        <div id="myContent" class="test">
+            <a href="javascript:toggleDiv('myContent');" class="float" onclick="myFunction()">
+                <i class="fa fa-plus my-float material-icons">remove_circle_outline</i>
+            </a>
+        </div>
+
+        <a href="javascript:toggleDiv('myContent');" style="background-color: #ccc; padding: 10px 10px;">
+            <i class="fa fa-plus my-float material-icons">add</i>
+        </a>
+
+        <!-- Footer -->
+        <footer class="container-fluid bg-4 text-center">
+            <p>Made By Rahul, Sumant, Varun, Samvit. View the <a href="https://www.github.com/coder3462/profhacks-2018">source</a>.</p> 
+        </footer>
+
+        <script type="text/javascript">
+            function toggleDiv(divId) {
+   $("#"+divId).toggle();
+}
+        </script>
    </body>
 </html>
