@@ -10,16 +10,19 @@
   padding: 0 15px;
 }
 .icon-block .material-icons {
-	font-size: inherit;
+  font-size: inherit;
 }
 .inforow
 {
   border:5px solid #42a5f5;
-   margin-top:10px;
+  margin-top:10px;
 }
 .inforow2 {
   border:2.5px solid #000000;
-   margin-bottom:1px;
+  margin-bottom:1px;
+}
+.material-icons, .icon-text {
+  vertical-align: middle;
 }
 
 #index-banner {
@@ -28,3 +31,4 @@
 #index-banner2 {
     background-color: #84fd84;
 }
+
