@@ -52,7 +52,12 @@
             </div>
         </div>
         
-        <div id="myContent" class="test">
+        <div id="myContent">
+            <div class="row">
+                <iframe class="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="iframeDim" src="https://maps.google.com/maps?hl=en&amp;q=EngineeringHall, 600 North Campus Drive, Glassboro, NJ 08028&amp;ie=UTF8&amp;t=roadmap&amp;z=16&amp;iwloc=B&amp;output=embed" style="width:100%; min-height:400px">
+                </iframe>
+            </div>
+
             <a href="javascript:toggleDiv('myContent');" class="float" onclick="myFunction()">
                 <i class="fa fa-plus my-float material-icons">remove_circle_outline</i>
             </a>
@@ -69,8 +74,8 @@
 
         <script type="text/javascript">
             function toggleDiv(divId) {
-   $("#"+divId).toggle();
-}
+                $("#"+divId).toggle();
+            }
         </script>
    </body>
 </html>
