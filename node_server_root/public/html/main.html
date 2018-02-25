@@ -77,7 +77,7 @@
 	            width:60px;
 	            height:60px;
 	            bottom:40px;
-	            right:40px;
+	            right:60px;
 	            background-color:red;
 	            color:#FFF;
 	            border-radius:50px;
@@ -124,7 +124,7 @@
         
         <div id="myContent">
             <a href="javascript:toggleDiv('myContent');" class="float godown" onclick="myFunction()">
-                <i class="fa fa-plus my-float material-icons">remove_circle_outline</i>
+                <i class="fa fa-plus my-float material-icons">add_circle_outline</i>
             </a>
         </div>
 
@@ -171,7 +171,7 @@
             };
 
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('This is where you are.');
             infoWindow.open(map);
             map.setCenter(pos);
           }, function() {
@@ -195,5 +195,6 @@
         <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjLmB92M98Yu1fHDFN1dptvQf68spxK14&callback=initMap">
     </script>
+    <script src="../js/materialize.js"></script>
    </body>
 </html>
