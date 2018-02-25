@@ -9,6 +9,7 @@
   "author": "Varun Ramani",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "popups": "^1.1.3"
   }
 }
