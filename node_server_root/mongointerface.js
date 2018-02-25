@@ -1,47 +1,9 @@
-const express = require('express');
-const path = require('path');
-
-var app = express();
-var router = express.Router();
-
-router.route('/reportcrime')
-    .post(function(res, req) {
-        console.log('Reporting Crime');
-    })
-    .get(function(res, req) {
-        console.log('Ginder');
-    });
-
-router.route('/recordtrash')
-    .post(function(res, req) {
-        console.log('Recording Trash');
-    })
-    .get(function(res, req) {
-        console.log('Ginder');
-    });
-
-router.route('/recordbathroom')
-    .post(function(res, req) {
-        console.log('Recording Bathroom');
-    })
-    .get(function(res, req) {
-        console.log('Ginder');
-    });
-
-app.use('/', express.static(path.resolve('./public')));
-app.use('/api', router);
-
-var server = app.listen(8080, function() {
-  var port = server.address().port;
-  console.log('Running on ' + port);
-});
-
 const mongo = require('mongodb');
 const client = mongo.MongoClient;
 const url = 'mongodb://localhost:27017';
-const dbName = 'points';
+const dbName = 'citydata';
 
-function log(point) {
+function write(point) {
   client.connect(url, (err, client) => {
     if (err) throw err;
 
@@ -78,3 +40,18 @@ function log(point) {
     })
   });
 }
+
+function query() {
+    var pointscollection;
+    client.connect(url, (err, client) => {
+        if (err) throw err;
+        const db = client.db(dbName);
+        pointscollection = db.collection('points');
+    });
+    return pointscollection;
+}
+
+module.exports = {
+    write,
+    query
+};
