@@ -22,6 +22,9 @@
         <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
         <link href="../css/animate.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>new WOW().init();</script>
+
         <style>
             ul {
                 list-style-type: none;
@@ -46,6 +49,10 @@
             li a:hover, .dropdown:hover .dropbtn {
                 background-color: red;
             }
+
+            img {
+                padding-bottom: 5px;
+            }
             
             #map {
                 height: 100%;
@@ -55,6 +62,10 @@
                 height: 100%;
                 margin: 0;
                 padding: 0;
+            }
+
+            .hidden-div {
+                display:none;
             }
 
             .mapst {
@@ -84,27 +95,35 @@
 	            bottom:10px;
 	            right:40px;
             }
+
+            .cmenu {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .godown {
+                bottom:20px;
+            }
         </style>
     </head>
     <body>
 
+
             <ul>
                 <br />
-                <li><a href="#username">Username</a></li>
-                <li><a href="#reputation">Reputation</a></li>
+                <li><p class="cmenu" id="username"></p></li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li><img src="../images/Star_.svg.png" height="25px" width="25px"><p class="cmenu" id="reputation">Reputation</p></li>
                     <div class="horizontal click-to-toggle">
-                            <a class="btn-floating btn-large waves-effect waves-light teal right left-float"><i class="material-icons">person</i></a>
-                            <ul>
-                                <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-                                <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-                                <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-                                <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-                            </ul>
-                        </div>
+                        <a class="btn-floating btn-large waves-effect waves-light teal right left-float"><i class="material-icons">person</i></a>
+                    </div>
             </ul>        
         
         <div id="myContent">
-            <a href="javascript:toggleDiv('myContent');" class="float" onclick="myFunction()">
+            <a href="javascript:toggleDiv('myContent');" class="float godown" onclick="myFunction()">
                 <i class="fa fa-plus my-float material-icons">remove_circle_outline</i>
             </a>
         </div>
@@ -122,11 +141,11 @@
             <p>Made By Rahul, Sumant, Varun, Samvit. View the <a href="https://www.github.com/coder3462">source</a>.</p> 
         </footer>
 
-        <script>
-            $('.fixed-action-btn').openFAB();
-            $('.fixed-action-btn').closeFAB();
-            $('.fixed-action-btn.toolbar').openToolbar();
-            $('.fixed-action-btn.toolbar').closeToolbar();
+        <script type="text/javascript">
+            var users = ["Root", "Rahul", "Varun"];
+            document.getElementById("username").innerHTML = users[0];
+            var rep = [100, 100, 100];
+            document.getElementById("reputation").innerHTML = rep[0];
         </script>
 
         <script type="text/javascript">
