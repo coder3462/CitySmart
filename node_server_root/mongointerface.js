@@ -1,13 +1,9 @@
-const mongo = require('mongodb');
-const client = mongo.MongoClient;
-const url = 'mongodb://localhost:27017';
-const dbName = 'citydata';
-
-function write(point) {
-  client.connect(url, (err, client) => {
+var MongoClient = require('mongodb').MongoClient;
+const url = 'mongodb://localhost:27017/';
+/* function write(point) {
+client.connect(url, (err, client) => {
     if (err) throw err;
 
-    const db = client.db(dbName);
     if (db.listCollections().toArray((err, collInfos) => {
       if (err) throw err;
 
@@ -39,19 +35,20 @@ function write(point) {
       if (err) throw err;
     })
   });
-}
+} */
 
 function query() {
-    var pointscollection;
-    client.connect(url, (err, client) => {
+    return MongoClient.connect(url, function(err, db) {
         if (err) throw err;
-        const db = client.db(dbName);
-        pointscollection = db.collection('points');
+        var dbo = db.db("citydata");
+        // dbo.collection('points').find({}).toArray(function(err, result) {
+            // if (err) throw err;
+            // gloresult = result;
+        // });
+        return dbo.collection('points').find({});
     });
-    return pointscollection;
 }
 
 module.exports = {
-    write,
     query
 };
