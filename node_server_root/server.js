@@ -18,13 +18,10 @@ router.route('/example')
 app.use('/', express.static(path.resolve('./public')));
 app.use('/api', router);
 
-
 var server = app.listen(8080, function() {
   var port = server.address().port;
   console.log('Running on ' + port);
 });
-
-
 
 const client = mongo.MongoClient;
 const url = 'mongodb://localhost:27017';
