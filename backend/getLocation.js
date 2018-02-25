@@ -22,6 +22,4 @@ var error = (err) => {
   console.warn(`ERROR(${err.code}): ${err.message}`);
 }
 
-module.exports = {
-  getLocation
-};
+getLocation();
