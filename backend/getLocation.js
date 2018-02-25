@@ -4,18 +4,22 @@ var options = {
   maximumAge: 0
 };
 
-function success(pos) {
-  var crd = pos.coords;
+var position;
+
+var getLocation = () => {
+  navigator.geolocation.getCurrentPosition(success, error, options);
+  var crd = position.coords;
   var lat = crd.latitude;
   var long = crd.longitude;
-  
   return (lat+","+long);
+}
 
-  
-};
+var success = (pos) => {
+  position = pos;
+}
 
-function error(err) {
+var error = (err) => {
   console.warn(`ERROR(${err.code}): ${err.message}`);
-};
+}
 
-navigator.geolocation.getCurrentPosition(success, error, options);
+getLocation();
