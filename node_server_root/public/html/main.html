@@ -120,11 +120,17 @@
                     <div class="horizontal click-to-toggle">
                         <a class="btn-floating btn-large waves-effect waves-light teal right left-float"><i class="material-icons">person</i></a>
                     </div>
-            </ul>        
+            </ul>
+
+            <div id="clmenu" class="collapse">
+                <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>button</a>&emsp;&emsp;&emsp;
+                <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>button</a>&emsp;&emsp;&emsp;
+                <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>button</a>&emsp;&emsp;&emsp;
+            </div>
         
         <div id="myContent">
             <a href="javascript:toggleDiv('myContent');" class="float godown" onclick="myFunction()">
-                <i class="fa fa-plus my-float material-icons">add_circle_outline</i>
+                <i class="fa fa-plus my-float material-icons" data-toggle="collapse" data-target="#clmenu">add_circle_outline</i>
             </a>
         </div>
 
