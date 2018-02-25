@@ -23,7 +23,7 @@
    var marker = new google.maps.Marker({
     position: map.getCenter(),
     map: map,
-    icon: ''
+    icon: 'src=../../images/trashcan.png'
       });
         }, function() {
           handleLocationError(true, infoWindow, map.getCenter());
